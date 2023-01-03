@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Condensed", "monospace";
+  font-weight: 300;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background-image: url("https://wallpaperaccess.com/full/8351163.gif");
+  background-size: cover;
+  backdrop-filter: blur(10px) grayscale(40%);
+}
+
+.scoreboard {
+  aspect-ratio: 2/1;
+  min-width: 1200px;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 20% 60% 20%;
+  color: gainsboro;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.scoreboard .title {
+  grid-column: 2;
+}
+.scoreboard > * {
+  border: 1px solid green;
+}
+
+.player {
+  display: grid;
+  grid-template-columns: 10% 5% 50% 10% 5% 5% 5% 4% 6%;
+  grid-template-rows: 20px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.player .icon {
+  height: 20px;
+}
+
+.teams {
+  grid-row: 2;
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4em;
+  border: 1px solid green;
+}
+.teams .team {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(auto-fix, 1fr);
+  gap: 2px;
+}
+
+/*# sourceMappingURL=index.css.map */

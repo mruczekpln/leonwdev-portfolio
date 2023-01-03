@@ -1,0 +1,21 @@
+.scoreboard {
+	aspect-ratio: 2 / 1;
+	min-width: 1200px;
+
+	padding: 1rem;
+
+	display: grid;
+	grid-template-columns: 20% 80%;
+	grid-template-rows: 20% 60% 20%;
+
+	color: gainsboro;
+	background-color: rgba(black, 0.4);
+
+	.title {
+		grid-column: 2;
+	}
+
+	& > * {
+		border: 1px solid green;
+	}
+}
