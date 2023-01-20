@@ -1,20 +1,31 @@
+import { useContext } from 'react'
+import { Context } from '../App'
+
 const Learning = () => {
+  const { scrollHeight } = useContext(Context)
+  const width = scrollHeight > 6000 ? '0%' : '60%'
+
   return (
-    <div className=''>
-      <div className='w-full flex items-center pb-8 '>
-        <div className={`w-2/3 h-1/2 border-b-2 border-slate-800`}></div>
-        <h1 className={`min-w-max text-xl text-slate-900 font-extrabold rounded-md bg-slate-100 px-8 py-2`}>knowledge</h1>
-        <div className={`w-1/3 h-1/2 border-b-2 border-slate-800`}></div>
+    <div className='sticky top-[300px]'>
+      <div className='flex items-center pb-8 '>
+        <div
+          style={{
+            width: width,
+          }}
+          className={`h-1/2 border-b-2 bg-bg2 transition-all duration-500`}
+        ></div>
+        <h1 className={`font-serif min-w-max text-xl text-bg1 font-extrabold rounded-md px-8 py-2`}>knowledge</h1>
+        <div className={`w-full h-1/2 border-b-2 border-bg2`}></div>
       </div>
-      <div className='px-8 flex flex-col gap-4 text-base text-slate-300'>
-        <div className='flex h-16 px-6 items-center gap-4 rounded-lg outline outline-1 outline-slate-500'>
+      <div className='px-8 flex flex-col gap-4 text-base text-bg1'>
+        <div className='flex h-16 px-6 items-center gap-4 rounded-lg outline outline-1 outline-bg1'>
           <h2 className='w-48 text-center text-[22px] leading-tight'>primary</h2>
-          <div className='w-[2px] h-10 bg-slate-300'></div>
+          <div className='w-[2px] h-10 bg-bg2'></div>
           <p className='text-base w-full text-center leading-relaxed'>SP25 / ZE5, Zielona Góra, Poland</p>
         </div>
-        <div className='flex h-16 px-6 items-center gap-4 bg-slate-500 rounded-lg'>
+        <div className='flex h-16 px-6 items-center gap-4 text-text1 bg-bg1 rounded-lg'>
           <h2 className='w-48 text-center text-[22px] leading-tight'>middle</h2>
-          <div className='w-[2px] h-10 bg-slate-300'></div>
+          <div className='w-[2px] h-10 bg-text1'></div>
           <p className='text-base w-full text-center leading-relaxed'>ZSEIS Elektronik Zielona Góra, 2nd Grade</p>
         </div>
       </div>

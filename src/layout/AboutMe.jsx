@@ -1,12 +1,23 @@
+import { useContext } from 'react'
+import { Context } from '../App'
+
 const AboutMe = () => {
+  const { scrollHeight } = useContext(Context)
+  const width = scrollHeight > 6000 ? '0%' : '10%'
+
   return (
-    <div className=''>
+    <div className='sticky top-[100px]'>
       <div className='w-full flex items-center pb-8 '>
-        <div className={`w-[10%] h-1/2 border-b-2 border-slate-800`}></div>
-        <h1 className={`min-w-max text-2xl text-slate-900 flex-grow rounded-md font-extrabold bg-slate-100 px-8 py-2`}>me</h1>
-        <div className={`w-full h-1/2 border-b-2 border-slate-800`}></div>
+        <div
+          style={{
+            width: width,
+          }}
+          className={`h-1/2 border-b-2 transition-all duration-500`}
+        ></div>
+        <h1 className={`font-serif min-w-max text-2xl flex-grow rounded-md font-extrabold px-8 py-2`}>me</h1>
+        <div className={`w-full h-1/2 border-b-2`}></div>
       </div>
-      <div className='flex text-slate-300 px-8'>
+      <div className='flex px-8'>
         <span className='text-[60px] inline leading-tight'>Hi!</span>
         <p className='text-base leading-relaxed inline'>
           im leon, 16, currently livin' in
@@ -15,7 +26,15 @@ const AboutMe = () => {
             alt='PL'
             className='w-8 ml-2 relative left-1 bottom-0.5 inline-block'
           />
-          <span></span> having multiple hobbies, learning everything i possibly can. here i drop some information abt myself
+          <span></span> having multiple hobbies, learning everything i possibly can. utilizing creativity as much as i can. currently focusing on mastering
+          frontend themes. here some more information about me
+          <span className='leading-none'>
+            <span className='text-[14px]'>e</span>
+            <span className='text-[12px]'>e</span>
+            <span className='text-[10px]'>e</span>
+            <span className='text-[8px]'>e</span>
+            <span className='text-[6px]'>e</span>
+          </span>
         </p>
       </div>
     </div>

@@ -1,5 +1,9 @@
-const ScrollSection = ({ scrollHeight }) => {
-  const opacity = scrollHeight > 1000 ? 0 : 1
+import { useContext, useEffect, useState } from 'react'
+import { Context } from '../../App'
+
+const FirstPage = () => {
+  const { scrollHeight } = useContext(Context)
+  const opacity = scrollHeight < 1000 ? 1 : 0
 
   return (
     <>
@@ -14,7 +18,7 @@ const ScrollSection = ({ scrollHeight }) => {
           <img
             src='https://icons.veryicon.com/png/o/miscellaneous/offerino-icons/arrow-up-45.png'
             alt='arrow-img'
-            className='invert saturate-50 sepia rotate-180 w-8'
+            className='saturate-50 sepia rotate-180 w-8'
           />
         </div>
       </div>
@@ -23,4 +27,4 @@ const ScrollSection = ({ scrollHeight }) => {
   )
 }
 
-export default ScrollSection
+export default FirstPage

@@ -1,12 +1,16 @@
-import ScrollSection from './sections/Scroll'
-import InfoSection from './sections/Info'
+import FirstPage from './sections/FirstPage'
+import SecondPage from './sections/SecondPage'
+import ThirdPage from './sections/ThirdPage'
 
-const Main = ({ scrollHeight }) => {
+const Main = () => {
   return (
-    <div className='flex flex-col m-auto w-3/5 min-h-screen text-white'>
-      <ScrollSection scrollHeight={scrollHeight}></ScrollSection>
-      <InfoSection></InfoSection>
-    </div>
+    <>
+      <div className='flex flex-col m-auto w-3/5 min-h-screen text-bg1'>
+        <FirstPage></FirstPage>
+        <SecondPage></SecondPage>
+      </div>
+      <ThirdPage></ThirdPage>
+    </>
   )
 }
 
